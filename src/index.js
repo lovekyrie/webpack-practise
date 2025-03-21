@@ -1,4 +1,4 @@
-import './index.css'
+import './index.less'
 
 const dom = document.createElement('h1')
 dom.innerHTML = 'webpack can compress css, what surprise!'

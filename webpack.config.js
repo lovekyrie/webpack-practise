@@ -9,7 +9,15 @@ module.exports = {
   module: {
     rules: [{
       test: /\.css$/,
-      use: [process.env.NODE_ENV === 'development'? 'style-loader': MiniCssExtractPlugin.loader, 'css-loader']
+      use: [process.env.NODE_ENV === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, {
+        loader: 'css-loader',
+        options: {
+          importLoaders: 1
+        }
+      }, 'postcss-loader']
+    }, {
+      test: /\.less$/,
+      use: [process.env.NODE_ENV === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader']
     }]
   },
   devServer: {
