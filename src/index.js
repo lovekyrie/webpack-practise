@@ -1,6 +1,5 @@
-import './index.less'
+import { createApp } from 'vue'
+import App from './App.vue'
 
-const dom = document.createElement('h1')
-dom.innerHTML = 'webpack can compress css, what surprise!'
-dom.className = 'main-head'
-document.body.appendChild(dom)
+const app = createApp(App)
+app.mount('#app')
