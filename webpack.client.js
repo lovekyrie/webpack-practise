@@ -5,12 +5,13 @@ const Merge = require('webpack-merge')
 const base = require('./webpack.base')
 
 module.exports = Merge.merge(base, {
-  mode: 'development',
+  mode: 'production',
   entry: {
     client: path.join(__dirname, './src/entry-client.js'),
   },
   output: {
     publicPath: '/',
+    clean: true
   },
   module: {
     rules: [

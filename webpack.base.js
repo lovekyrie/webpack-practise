@@ -4,7 +4,7 @@ const { VueLoaderPlugin } = require('vue-loader')
 module.exports = {
   output: {
     filename: '[name].[contenthash].js',
-    path: path.join(__dirname, './dist'),
+    path: path.join(__dirname, './dist')
   },
   module: {
     rules: [{

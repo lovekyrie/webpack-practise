@@ -13,6 +13,7 @@ module.exports = Merge.merge(base, {
     // 打包后的结果会在node环境使用
     // 因此此处将模块化语句转译为commonjs形式
     libraryTarget: 'commonjs2',
+    clean: false
   },
   module: {
     rules: [

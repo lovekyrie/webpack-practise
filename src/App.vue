@@ -1,8 +1,8 @@
 <script setup>
-import { computed, ref } from '@vue/reactivity';
+import { computed, ref } from 'vue';
 const message = ref('Hello World')
 const isActivity = ref(false)
-const cls = computed(() => (isActivity.value ? 'active': 'deactive'))
+const cls = computed(() => (isActivity.value ? 'activate': 'deactivate'))
 const handleClick = () => {
   isActivity.value = !isActivity.value
 }
