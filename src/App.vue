@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+const num: number = 1
 const msg = ref<string>('hello world')
 </script>
 
 <template>
   <div class="msg">
     {{ msg }}
+    {{ num }}
   </div>
 </template>
 
